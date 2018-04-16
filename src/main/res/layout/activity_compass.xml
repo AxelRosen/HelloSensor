@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.axelrosen.hellosensor.Compass">
+
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200px"
+        android:src="@drawable/compass1"
+        android:layout_below="@+id/txt_azimuth"
+        android:id="@+id/compass"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:text="0°"
+        android:id="@+id/txt_azimuth"/>
+
+
+</android.support.design.widget.CoordinatorLayout>

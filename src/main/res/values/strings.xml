@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">HelloSensor</string>
+    <string name="title_activity_gyroscope">GyroscopeActivity</string>
+    <string name="title_activity_gyro">gyro</string>
+    <string name="title_activity_compass">Compass</string>
+</resources>
