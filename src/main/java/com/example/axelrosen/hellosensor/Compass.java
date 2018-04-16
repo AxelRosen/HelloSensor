@@ -6,14 +6,8 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -147,85 +141,4 @@ public class Compass extends AppCompatActivity implements SensorEventListener {
         super.onResume();
         start();
     }
-  // private ImageView imageView;
-  // private float[] mGravity = new float[3];
-  // private float[] mGeoMagnetic = new float[3];
-  // private float azimuth = 0f;
-  // private float correctAzimuth = 0f;
-  // private SensorManager mSensorManager;
-  // private TextView compassText;
-
-  // @Override
-  // protected void onCreate(Bundle savedInstanceState) {
-  //     super.onCreate(savedInstanceState);
-  //     setContentView(R.layout.activity_compass);
-
-  //     imageView = (ImageView)findViewById(R.id.compass);
-  //     compassText = (TextView)findViewById(R.id.compassText);
-  //     mSensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
-
-
-  // }
-
-
-  // @Override
-  // protected void onPause(){
-  //     super.onPause();
-  //     mSensorManager.unregisterListener(this);
-  // }
-
-  // @Override
-  // protected void onResume()
-  // {
-  //     super.onResume();
-  //     /*register the sensor listener to listen to the gyroscope sensor, use the
-  //     callbacks defined in this class, and gather the sensor information as quick
-  //     as possible*/
-  //     mSensorManager.registerListener(this, mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD),SensorManager.SENSOR_DELAY_GAME);
-  //     mSensorManager.registerListener(this, mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),SensorManager.SENSOR_DELAY_GAME);
-
-  // }
-
-  // @Override
-  // public void onSensorChanged(SensorEvent sensorEvent) {
-  //     final float alpha = 0.97f;
-  //     synchronized (this){
-  //         if(sensorEvent.sensor.getType() == Sensor.TYPE_ACCELEROMETER){
-  //             mGravity[0] = alpha*mGravity[0] + (1-alpha)*sensorEvent.values[0];
-  //             mGravity[1] = alpha*mGravity[1] + (1-alpha)*sensorEvent.values[1];
-  //             mGravity[2] = alpha*mGravity[2] + (1-alpha)*sensorEvent.values[2];
-  //         }
-
-  //         if(sensorEvent.sensor.getType() == Sensor.TYPE_MAGNETIC_FIELD){
-  //             mGeoMagnetic[0] = alpha*mGeoMagnetic[0] + (1-alpha)*sensorEvent.values[0];
-  //             mGeoMagnetic[1] = alpha*mGeoMagnetic[1] + (1-alpha)*sensorEvent.values[1];
-  //             mGeoMagnetic[2] = alpha*mGeoMagnetic[2] + (1-alpha)*sensorEvent.values[2];
-  //         }
-
-  //         float R[] = new float[9];
-  //         float I[] = new float[9];
-  //         boolean success = SensorManager.getRotationMatrix(R,I,mGravity, mGeoMagnetic);
-  //         if(success){
-  //             float orientation[] = new float[3];
-  //             SensorManager.getOrientation(R, orientation);
-  //             azimuth = (float)Math.toDegrees(orientation[0]);
-  //             azimuth = (azimuth+360)%360;
-
-  //             Animation animation = new RotateAnimation(-correctAzimuth, -azimuth, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-  //             correctAzimuth = azimuth;
-  //             animation.setDuration(500);
-  //             animation.setRepeatCount(0);
-  //             animation.setFillAfter(true);
-
-  //             imageView.startAnimation(animation);
-  //             compassText.setText("Heading: " + mGeoMagnetic[1]);
-
-  //         }
-  //     }
-  // }
-
-  // @Override
-  // public void onAccuracyChanged(Sensor sensor, int i) {
-
-  // }
 }
